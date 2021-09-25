@@ -1,0 +1,99 @@
+@import ../../sass/variables
+
+
+.home
+    height: calc(100vh - 5em)
+
+    .container
+        display: flex
+        align-items: center
+        justify-content: center
+        height: inherit
+
+        .presentation
+            display: flex
+            align-items: center
+
+            .text__social
+                display: flex
+                margin-top: 1em
+                
+                .social
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 1.5em
+                    height: 1.5em
+                    font-size: 1.4em
+                    color: $main-gray
+                    background-color: $main-white
+                    margin: 0.2em
+                    border-radius: 1.5em
+                    transition: 0.5s all
+                
+                .social:hover
+                    background-color: $main-gray
+                    color: $main-white
+                    transition: 0.5s all
+
+
+            h1
+                line-height: 1.2
+                padding-right: 2em
+                font-size: 4em
+
+            strong
+                text-transform: uppercase
+                font-weight: bold
+
+            .presentation__imageSelfie
+                overflow: hidden
+                box-shadow: 0 0 10px 0 black
+                position: relative
+                
+                img
+                    max-width: 16em
+
+                ::after
+                    content: ""
+                    width: 100%
+                    height: 100%
+                    background-color: red
+                    position: absolute
+                    left: 10%
+                    
+                    
+
+
+@media (max-width:768px)
+    .home
+        height: unset
+
+        .container
+
+            .presentation
+                margin-top: 2em
+                flex-direction: column-reverse
+                width: 100%
+
+                .text__social
+                    justify-content: center
+
+                    .social
+                        margin: 0.1em
+
+                .presentation__text
+                display: flex
+                text-align: center
+
+                h1
+                    margin-top: 1em
+                    font-size: 2em  
+                    padding: 0
+                    width: 100%
+
+                .presentation__imageSelfie
+                    img
+                        max-width: 10em
+
+                
