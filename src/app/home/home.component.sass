@@ -2,7 +2,7 @@
 
 
 .home
-    height: calc(100vh - 5em)
+    
 
     .container
         display: flex
@@ -24,35 +24,76 @@
                     align-items: center
                     width: 1.5em
                     height: 1.5em
-                    font-size: 1.4em
+                    font-size: 2em
                     color: $main-gray
                     background-color: $main-white
                     margin: 0.2em
                     border-radius: 1.5em
-                    transition: 0.5s all
+                    transition: $transition
                 
                 .social:hover
                     background-color: $main-gray
                     color: $main-white
-                    transition: 0.5s all
+                    transition: $transition
+                    rotate: 360deg
+                    -webkit-transform: rotate(360deg)
+                    -moz-transform: rotate(360deg)
+                    -o-transform: rotate(360deg)
 
 
             h1
                 line-height: 1.2
-                padding-right: 2em
-                font-size: 4em
+
+            .typeWriter
+                overflow: hidden
+                border-right: .15em solid white
+                white-space: nowrap
+                animation: typing 1s steps(30, end), blinkingCaret .75s step-end infinite
+                
+
 
             strong
                 text-transform: uppercase
                 font-weight: bold
+                b
+                    color: $main-white
+                    transition: $transition
+                    cursor: pointer
+                    
+                b:hover
+                    font-size: 1.5em
+                    transition: $transition
+                    
+                
+                        
+
+            strong:hover
+                color: black
+
+            .presentation__text
+                width: 283.45px
+                margin-right: 4em
 
             .presentation__imageSelfie
-                overflow: hidden
-                box-shadow: 0 0 10px 0 black
                 position: relative
+                width: 16em
+                height: 371px
                 
-                img
+                #presentationImage
+                    opacity: 0
                     max-width: 16em
+                    position: absolute
+                    left: 6em
+                    transition: $transition
+                
+                #presentationImage.show
+                    opacity: 1
+                    left: 0
+                    transition: $transition
+                    box-shadow: 0 0 10px 0
+                    
+                
+                    
 
                 ::after
                     content: ""
@@ -96,4 +137,4 @@
                     img
                         max-width: 10em
 
-                
+            
