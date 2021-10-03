@@ -1,12 +1,42 @@
 <section class="skills sectionContent">
     <div class="container">
         <div class="container__skills">
-            <div class="skills__title">
-                <h1>Skills:</h1>
+            <div class="skills__title" id="skillsHeader">
+                <h1><b>Skills</b></h1>
             </div>
 
             <div class="skills__content" id="skillsContainer">
+                <div class="content__frontend" id="contentFront">
+                    <h4>Frontend</h4>
+                    <ul class="frontend__tech">
+                        <li class="tech__skill html"><i class="fab fa-html5"></i><small>Moderate</small> {{skills.html}}</li>
+                        <li class="tech__skill css"><i class="fab fa-css3-alt"></i> <small>Moderate</small> {{skills.css}}</li>
+                        <li class="tech__skill js"><i class="fab fa-js-square"></i> <small>Junior</small> {{skills.js}}</li>
+                        <li class="tech__skill angular"><i class="fab fa-angular"></i> <small>Junior</small> {{skills.angular}}</li>
+                        <li class="tech__skill sass"><i class="fab fa-sass"></i> <small>Junior</small> {{skills.sass}}</li>
+                    </ul>
+                </div>
 
+                <div class="content__backend" id="contentBack">
+                    <h4>Backend</h4>
+                    <ul class="backend__tech">
+                        <li class="tech_skill php"><i class="fab fa-php"></i><small>Moderate {{skills.php}}</small></li>
+                        <li class="tech_skill mysql"><i class="fas fa-database"></i><small>Moderate {{skills.mysql}}</small></li>
+                        <li class="tech_skill laravel"><i class="fab fa-laravel"></i><small>Junior {{skills.laravel}}</small></li>
+                        <li class="tech_skill symfony"><i class="fab fa-symfony"></i><small>Junior {{skills.symfony}}</small></li>
+                        <li class="tech_skill"></li>
+                    </ul>
+                </div>
+
+                <div class="content__extra">
+                    <ul class="extra__tech">
+                        <li class="tech__skill git"></li>
+                        <li class="tech__skill wordpress"></li>
+                        <li class="tech__skill"></li>
+                        <li class="tech__skill"></li>
+                        <li class="tech__skill"></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

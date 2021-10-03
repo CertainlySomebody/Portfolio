@@ -1,4 +1,4 @@
-@import ../../sass/variables
+@import ../../sass/_variables
 
 .about
     .container
@@ -11,7 +11,7 @@
                 font-weight: bold
 
             .about__content
-                margin-top: 5em
+                margin-top: 2em
                 font-weight: bold
                 width: 100%                
                 font-size: 20px
@@ -43,22 +43,11 @@
                             font-size:30px
                             margin-right: 1em
 
-
-            
-#aboutContainer
-    width:0%
-    transition: $transition
-
-#aboutContainer.show
-    width:100%
-    transition: $transition
-    
-
-#aboutHeader, #aboutContent, #aboutBio, #aboutContact
+#aboutHeader, #aboutContent, #aboutBio, #aboutContact, #aboutContainer
     opacity: 0
     transition: $transition
 
-#aboutHeader.show, #aboutContent.show, #aboutBio.show, #aboutContact.show
+#aboutHeader.show, #aboutContent.show, #aboutBio.show, #aboutContact.show, #aboutContainer.show
     opacity: 1
     transition: $transition
 

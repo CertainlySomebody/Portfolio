@@ -1,4 +1,17 @@
-@import ../../sass/variables
+@import ../../sass/_variables
+
+@mixin skill($color, $width)
+    content: ""
+    background-color: $color
+    width: $width
+    height: 2px
+    font-size: 12px
+    position: absolute
+    bottom: -20%
+    left: 0
+    line-height: 2
+
+
 
 .skills
     .container
@@ -11,17 +24,103 @@
                 font-weight: bold
 
             .skills__content
-                margin-top: 5em
+                margin-top: 2em
                 font-weight: bold
-                width: 0
+                opacity: 0
                 font-size: 20px
                 background-color: rgba(40, 44, 54, 0.7)
                 padding: 0
                 display: flex
-                transition:$transition
-
-            .show
-                width: 100%
-                transition:$transition
                 padding: 2em
-                height: 500px
+                transition:$transition
+                display: flex
+                flex-direction: column
+
+            .frontend__tech, .backend__tech, .extra__tech
+                list-style-type: none
+                
+            .content__backend, .content__frontend
+                padding: 2em
+                width: 100%
+
+                h4
+                ul
+                    display: flex
+                    flex-wrap: wrap
+                    li
+                        padding: 1em 2em
+                        display: flex
+                        align-items: center
+                        justify-content: flex-start
+                        font-weight: 0
+                        transition: $transition-fast
+                        font-weight: lighter
+                        
+                        i
+                            width: 2em
+                            font-size: 1.5em
+
+                        small
+                            font-size: 0.8em
+                            min-width: 100px
+                            position: relative
+
+                    .html small::after
+                        @include skill($color: $color-html, $width: $skill-html)
+                                               
+                    .css small::after
+                        @include skill($color: $color-css, $width: $skill-css)
+                        
+                    .js small::after
+                        @include skill($color: $color-js, $width: $skill-js)
+                        
+                    .angular small::after
+                        @include skill($color: $color-angular, $width: $skill-angular)
+                        
+                    .sass small::after
+                        @include skill($color: $color-sass, $width: $skill-sass)
+                        
+                        
+                    .php small::after
+                        @include skill($color: $color-php, $width: $skill-php)
+                        
+                    .mysql small::after
+                        @include skill($color: $color-mysql, $width: $skill-mysql)
+                        
+                    .laravel small::after
+                        @include skill($color: $color-laravel, $width: $skill-laravel)
+                        
+                    .symfony small::after
+                        @include skill($color: $color-symfony, $width: $skill-symfony)
+                        
+                    
+                    .html:hover
+                        color: $color-html
+                    .css:hover
+                        color: $color-css
+                    .js:hover
+                        color: $color-js
+                    .angular:hover
+                        color: $color-angular
+                    .sass:hover
+                        color: $color-sass
+
+                    .php:hover
+                        color: $color-php
+                    .mysql:hover
+                        color: $color-mysql
+                    .laravel:hover
+                        color: $color-laravel
+                    .symfony:hover
+                        color: $color-symfony
+                        
+
+    #skillsContainer, #skillsHeader, #contentFront, #contentBack
+        opacity: 0
+        transition: $transition
+        
+
+    #skillsContainer.show, #skillsHeader.show, #contentFront.show, #contentBack.show
+        opacity: 1
+        transition: $transition
+        
